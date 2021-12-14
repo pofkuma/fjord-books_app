@@ -8,7 +8,7 @@
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%= t :'hello' %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -30,4 +30,23 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  headers:
+    books: 'Books'
+    new: 'New Book'
+    edit: 'Editing Book'
+  books:
+    title: 'Title'
+    memo: 'Memo'
+    author: 'Author'
+    picture: 'Picture'
+  create_book: 'Create Book'
+  show: 'Show'
+  edit: 'Edit'
+  destroy: 'Destroy'
+  confirm: 'Are you sure?'
+  back: 'Back'
+  new_book: 'New Book'
+  notice:
+    created: 'Book was successfully created.'
+    updated: 'Book was successfully updated.'
+    destroyed: 'Book was successfully destroyed.'
