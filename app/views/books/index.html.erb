@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('headers.books') %></h1>
+<h1><%= t('headers.index') %></h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= t('books.title')   %></th>
-      <th><%= t('books.memo')    %></th>
-      <th><%= t('books.author')  %></th>
-      <th><%= t('books.picture') %></th>
+      <th><%= Book.human_attribute_name(:title)   %></th>
+      <th><%= Book.human_attribute_name(:memo)    %></th>
+      <th><%= Book.human_attribute_name(:author)  %></th>
+      <th><%= Book.human_attribute_name(:picture) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

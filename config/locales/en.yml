@@ -30,15 +30,19 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    models:
+      book: 'Book'
+    attributes:
+      books:
+        title: 'Title'
+        memo: 'Memo'
+        author: 'Author'
+        picture: 'Picture'
   headers:
-    books: 'Books'
+    index: 'Books'
     new: 'New Book'
     edit: 'Editing Book'
-  books:
-    title: 'Title'
-    memo: 'Memo'
-    author: 'Author'
-    picture: 'Picture'
   create_book: 'Create Book'
   show: 'Show'
   edit: 'Edit'
