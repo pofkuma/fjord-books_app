@@ -34,24 +34,32 @@ en:
     models:
       book: 'Book'
     attributes:
-      books:
+      book:
         title: 'Title'
         memo: 'Memo'
         author: 'Author'
         picture: 'Picture'
-  headers:
-    index: 'Books'
-    new: 'New Book'
-    edit: 'Editing Book'
+  books:
+    index:
+      title: 'Books'
+      link:
+        new: 'New Book'
+    new:
+      title: 'New Book'
+    edit:
+      title: 'Editing Book'
+    form:
+      submit: 'Create Book'
+    create:
+      notice: 'Book was successfully created.'
+    update:
+      notice: 'Book was successfully updated.'
+    destroy:
+      notice: 'Book was successfully destroyed.'
   general:
-    create_book: 'Create Book'
-    show: 'Show'
-    edit: 'Edit'
-    destroy: 'Destroy'
+    link:
+      show: 'Show'
+      edit: 'Edit'
+      destroy: 'Destroy'
+      back: 'Back'
     confirm: 'Are you sure?'
-    back: 'Back'
-    new_book: 'New Book'
-  notice:
-    created: 'Book was successfully created.'
-    updated: 'Book was successfully updated.'
-    destroyed: 'Book was successfully destroyed.'
