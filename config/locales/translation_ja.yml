@@ -15,6 +15,6 @@ ja:
         address: 住所
         biography: 自己紹介
 
-  common:
-    menus:
+  menus:
+    common:
       index: '%{name}の一覧'
