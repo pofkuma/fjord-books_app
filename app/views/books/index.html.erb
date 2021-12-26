@@ -30,4 +30,10 @@
 
 <br>
 
-<%= link_to t('views.common.new'), new_book_path %>
+<p>
+  <%= link_to t('views.common.new'), new_book_path %>
+</p>
+
+<p>
+  <%= link_to t('common.menus.index', name: User.model_name.human), users_path %>
+</p>
