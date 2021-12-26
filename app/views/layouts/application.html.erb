@@ -10,13 +10,13 @@
   </head>
 
   <body>
-  <p class="navbar-text pull-right">
     <% if user_signed_in? %>
-      <strong><%= current_user.email %></strong> <%= t('devise.sessions.signed_in_as') %>
-      <%= link_to t('devise.registrations.edit.title', resource: User.model_name.human), edit_user_registration_path, class: 'navbar-link' %> |
-      <%= link_to t('devise.sessions.new.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      <p class="navbar-text pull-right">
+        <strong><%= current_user.email %></strong> <%= t('devise.sessions.signed_in_as') %>
+        <%= link_to t('devise.registrations.edit.title', resource: User.model_name.human), edit_user_registration_path, class: 'navbar-link' %> |
+        <%= link_to t('devise.sessions.new.sign_out'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+      </p>
     <% end %>
-  </p>
 
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
