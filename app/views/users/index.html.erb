@@ -20,7 +20,7 @@
         <td><%= user.postal_code %></td>
         <td><%= user.address %></td>
         <td>
-            <%= image_tag user.icon, class: "image" if user.icon.attached? %>
+            <%= image_tag user.icon.variant(resize_to_limit: [50, 50]), class: "image" if user.icon.attached? %>
         </td>
         <td><%= link_to t('views.common.show'), user %></td>
       </tr>
