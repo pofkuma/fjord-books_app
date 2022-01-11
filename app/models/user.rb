@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :icon
+  validates :icon, content_type: %i[jpg png gif]
 end
