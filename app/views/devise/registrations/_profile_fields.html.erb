@@ -20,7 +20,7 @@
 
 <div class="field">
   <%= f.label :icon %>
-  <% if @user.icon.attached? %>
+  <% if @user.icon.variable? %>
     <p>
       <%= image_tag @user.icon.variant(resize_to_limit: [100, 100]), class: "image" %>
     </p>
