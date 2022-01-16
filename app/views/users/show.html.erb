@@ -33,6 +33,12 @@
   <% end %>
 </p>
 
+<% unless current_user == @user %>
+  <p>
+    <%= button_to t('views.user.follow.create'), user_follows_path(@user.id), method: :post %>
+  </p>
+<% end %>
+
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
