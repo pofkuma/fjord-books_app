@@ -7,6 +7,8 @@ class FollowsController < ApplicationController
     respond_to do |format|
       if follow.save
         format.html { redirect_to user_path(params[:user_id]), notice: t('controllers.follow.notice_create') }
+      elsif follow.errors.where(:following).any?
+        format.html { redirect_to user_path(params[:user_id]), alert: follow.errors.where(:following).last.full_message }
       else
         format.html { redirect_to user_path(params[:user_id]) }
       end
