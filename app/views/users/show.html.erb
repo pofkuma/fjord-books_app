@@ -33,6 +33,12 @@
   <% end %>
 </p>
 
+<hr>
+
+<p>
+  <strong>フォロー数:</strong> <%= @user.following_relationships.count %> |
+  <strong>フォロワー数:</strong> <%= @user.followed_relationships.count %>
+</p>
 <% unless current_user == @user %>
   <p>
     <% if current_user.following_relationships.find_by(following_id: @user.id) %>
