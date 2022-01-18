@@ -25,7 +25,9 @@ ja:
     user:
       follow:
         create: フォローする
+        destroy: フォロー解除する
 
   controllers:
     follow:
       notice_create: フォローしました
+      notice_destroy: フォロー解除しました

@@ -14,4 +14,16 @@ class FollowsController < ApplicationController
       end
     end
   end
+
+  def destroy
+    follow = current_user.following_relationships.find_by(following_id: params[:user_id])
+
+    respond_to do |format|
+      if follow.destroy
+        format.html { redirect_to user_path(params[:user_id]), notice: t('controllers.follow.notice_destroy') }
+      else
+        format.html { redirect_to user_path(params[:user_id]) }
+      end
+    end
+  end
 end
