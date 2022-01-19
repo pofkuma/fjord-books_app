@@ -26,6 +26,12 @@ ja:
       follow:
         create: フォローする
         destroy: フォロー解除する
+    followings:
+      index:
+        title: フォロー一覧
+    followers:
+      index:
+        title: フォロワー一覧
 
   follows:
     create:
