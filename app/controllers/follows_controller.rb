@@ -6,7 +6,7 @@ class FollowsController < ApplicationController
 
     respond_to do |format|
       if follow.save
-        format.html { redirect_to user_path(params[:user_id]), notice: t('controllers.follow.notice_create') }
+        format.html { redirect_to user_path(params[:user_id]), notice: t('.notice') }
       elsif follow.errors.where(:following).any?
         format.html { redirect_to user_path(params[:user_id]), alert: follow.errors.where(:following).last.full_message }
       else
@@ -20,7 +20,7 @@ class FollowsController < ApplicationController
 
     respond_to do |format|
       if follow.destroy
-        format.html { redirect_to user_path(params[:user_id]), notice: t('controllers.follow.notice_destroy') }
+        format.html { redirect_to user_path(params[:user_id]), notice: t('.notice') }
       else
         format.html { redirect_to user_path(params[:user_id]) }
       end

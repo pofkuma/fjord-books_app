@@ -21,13 +21,14 @@ ja:
         following: フォロー先
         follower: フォロー元
 
-  views:
-    user:
+  users:
+    show:
       follow:
         create: フォローする
         destroy: フォロー解除する
 
-  controllers:
-    follow:
-      notice_create: フォローしました
-      notice_destroy: フォロー解除しました
+  follows:
+    create:
+      notice: フォローしました
+    destroy:
+      notice: フォロー解除しました
