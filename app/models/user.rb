@@ -15,4 +15,8 @@ class User < ApplicationRecord
            class_name: 'Follow', foreign_key: 'following_id',
            dependent: :destroy, inverse_of: :following
   has_many :followers, through: :follower_relationships, source: :follower
+
+  def following?(user_id:)
+    following_relationships.where(following_id: user_id).exists?
+  end
 end
