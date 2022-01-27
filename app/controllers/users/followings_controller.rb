@@ -2,7 +2,7 @@
 
 class Users::FollowingsController < ApplicationController
   def index
-    user = User.find(params[:user_id])
-    @followings = user.followings.with_attached_avatar.order(:id).page(params[:page])
+    @user = User.find(params[:user_id])
+    @followings = @user.followings.with_attached_avatar.order(:id).page(params[:page])
   end
 end
