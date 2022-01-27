@@ -26,6 +26,9 @@ ja:
       follow:
         create: フォローする
         destroy: フォロー解除する
+      label:
+        followings_count: フォロー数
+        followers_count: フォロワー数
     followings:
       index:
         title: フォロー一覧

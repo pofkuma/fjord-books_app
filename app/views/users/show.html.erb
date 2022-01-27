@@ -36,8 +36,8 @@
 <hr>
 
 <p>
-  <strong>フォロー数:</strong> <%= @user.following_relationships.count %> |
-  <strong>フォロワー数:</strong> <%= @user.follower_relationships.count %>
+  <strong><%= t('.label.followings_count') %>:</strong> <%= @user.following_relationships.count %> |
+  <strong><%= t('.label.followers_count') %>:</strong> <%= @user.follower_relationships.count %>
 </p>
 
 <p>
