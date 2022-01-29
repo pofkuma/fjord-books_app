@@ -16,7 +16,7 @@ class User < ApplicationRecord
            dependent: :destroy, inverse_of: :following
   has_many :followers, through: :follower_relationships, source: :follower
 
-  def following?(user_id:)
-    following_relationships.where(following_id: user_id).exists?
+  def following?(user)
+    following_relationships.where(following_id: user.id).exists?
   end
 end
