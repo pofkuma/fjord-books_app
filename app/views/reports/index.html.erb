@@ -4,7 +4,6 @@
   <thead>
     <tr>
       <th><%= Report.human_attribute_name(:title) %></th>
-      <th><%= Report.human_attribute_name(:description) %></th>
       <th><%= Report.human_attribute_name(:user) %></th>
       <th><%= Report.human_attribute_name(:created_at) %></th>
       <th></th>
@@ -15,7 +14,6 @@
     <% @reports.includes(:user).each do |report| %>
       <tr>
         <td><%= report.title %></td>
-        <td><%= report.description %></td>
         <td><%= report.user.name.empty? ? report.user.email : report.user.name %></td>
         <td><%= l(report.created_at.to_date) %></td>
         <td><%= link_to t('views.common.show'), report %></td>
@@ -24,6 +22,6 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to t('views.common.new'), new_report_path %>
+<p>
+  <%= link_to t('views.common.new'), new_report_path %>
+</p>
