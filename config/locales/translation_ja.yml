@@ -21,3 +21,4 @@ ja:
         title: タイトル
         description: 本文
         user: 投稿者
+        created_at: 投稿日

@@ -13,6 +13,11 @@
   <%= @report.user.name.empty? ? @report.user.email : @report.user.name %>
 </p>
 
+<p>
+  <strong><%= Report.human_attribute_name(:created_at) %>:</strong>
+  <%= l(@report.created_at.to_date) %>
+</p>
+
 <% if @report.user_id == current_user.id %>
   <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
   <%= link_to t('views.common.destroy'), @report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %> |
