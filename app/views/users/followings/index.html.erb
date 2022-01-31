@@ -1,0 +1,5 @@
+<h1><%= t('.title') %></h1>
+
+<%= render 'users/shared/lists', users: @followings %>
+
+<%= link_to t('views.common.back'), user_path(@user) %>

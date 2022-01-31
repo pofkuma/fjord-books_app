@@ -33,6 +33,28 @@
   <% end %>
 </p>
 
+<hr>
+
+<p>
+  <strong><%= t('.label.followings_count') %>:</strong> <%= @user.following_relationships.count %> |
+  <strong><%= t('.label.followers_count') %>:</strong> <%= @user.follower_relationships.count %>
+</p>
+
+<p>
+  <%= link_to t('users.followings.index.title'), user_followings_path(@user.id) %> |
+  <%= link_to t('users.followers.index.title'), user_followers_path(@user.id) %>
+</p>
+
+<% unless current_user == @user %>
+  <p>
+    <% if current_user.following?(@user) %>
+      <%= button_to t('.follow.destroy'), user_follow_path(@user.id), method: :delete %>
+    <% else %>
+      <%= button_to t('.follow.create'), user_follows_path(@user.id), method: :post %>
+    <% end %>
+  </p>
+<% end %>
+
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
