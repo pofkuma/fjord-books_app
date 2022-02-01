@@ -20,5 +20,17 @@
   <%= image_tag(@book.picture_url) if @book.picture.present? %>
 </p>
 
+<p>
+  <strong><%= Comment.model_name.human %>:</strong>
+</p>
+
+<p>
+  <%= render 'comments/index', comments: @book.comments %>
+</p>
+
+<p>
+  <%= render 'comments/new', commentable: @book %>
+</p>
+
 <%= link_to t('views.common.edit'), edit_book_path(@book) %> |
 <%= link_to t('views.common.back'), books_path %>
