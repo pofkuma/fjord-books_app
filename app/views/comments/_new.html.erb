@@ -1,0 +1,15 @@
+<h2><%= t('views.common.title_new', name: Comment.model_name.human) %></h2>
+
+<%= form_with(model: [commentable, commentable.comments.new(user_id: current_user.id)], local: true) do |form| %>
+  <div class="field">
+    <%= form.text_area :description, required: true %>
+  </div>
+
+  <%= form.hidden_field :user_id %>
+  <%= form.hidden_field :commentable_id %>
+  <%= form.hidden_field :commentable_type %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
