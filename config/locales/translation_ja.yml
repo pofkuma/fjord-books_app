@@ -22,8 +22,8 @@ ja:
         title: タイトル
         description: 本文
         user: 投稿者
-        created_at: 投稿日
+        created_date: 投稿日
       comment:
         description: 内容
         user: 投稿者
-        created_at: 投稿日
+        created_datetime: 投稿日時

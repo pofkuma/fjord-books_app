@@ -3,7 +3,7 @@
     <tr>
       <th><%= Comment.human_attribute_name(:description) %></th>
       <th><%= Comment.human_attribute_name(:user) %></th>
-      <th><%= Comment.human_attribute_name(:created_at) %></th>
+      <th><%= Comment.human_attribute_name(:created_datetime) %></th>
       <th></th>
     </tr>
   </thead>
@@ -13,7 +13,7 @@
       <tr>
         <td><%= comment.description %></td>
         <td><%= comment.user.name.empty? ? comment.user.email : comment.user.name %></td>
-        <td><%= l(comment.created_at.to_date) %></td>
+        <td><%= l(comment.created_at, format: :long) %></td>
       </tr>
     <% end %>
   </tbody>
