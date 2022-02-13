@@ -11,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @reports.includes(:user).each do |report| %>
+    <% @reports.each do |report| %>
       <tr>
         <td><%= report.title %></td>
         <td><%= report.user.name.empty? ? report.user.email : report.user.name %></td>
