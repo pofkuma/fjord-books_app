@@ -14,7 +14,7 @@
     <% @reports.each do |report| %>
       <tr>
         <td><%= report.title %></td>
-        <td><%= report.user.name.empty? ? report.user.email : report.user.name %></td>
+        <td><%= report.display_user_name %></td>
         <td><%= l(report.created_at.to_date) %></td>
         <td><%= link_to t('views.common.show'), report %></td>
       </tr>

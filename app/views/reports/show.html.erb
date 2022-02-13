@@ -12,7 +12,7 @@
 
 <p>
   <strong><%= Report.human_attribute_name(:user) %>:</strong>
-  <%= @report.user.name.empty? ? @report.user.email : @report.user.name %>
+  <%= @report.display_user_name %>
 </p>
 
 <p>
