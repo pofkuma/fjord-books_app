@@ -32,7 +32,7 @@
   <%= render 'comments/new', commentable: @report %>
 </p>
 
-<% if @report.user_id == current_user.id %>
+<% if @report.user == current_user %>
   <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
   <%= link_to t('views.common.destroy'), @report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %> |
 <% end %>

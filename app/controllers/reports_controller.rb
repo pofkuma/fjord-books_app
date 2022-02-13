@@ -2,6 +2,7 @@
 
 class ReportsController < ApplicationController
   before_action :set_report, only: %i[show edit update destroy]
+  before_action :report_owner, only: %i[update destroy]
 
   # GET /reports or /reports.json
   def index
@@ -55,5 +56,9 @@ class ReportsController < ApplicationController
   # Only allow a list of trusted parameters through.
   def report_params
     params.require(:report).permit(:title, :description, :user_id)
+  end
+
+  def report_owner
+    redirect_to @report, alert: t('controllers.common.alert_without_permission') unless @report.user == current_user
   end
 end
