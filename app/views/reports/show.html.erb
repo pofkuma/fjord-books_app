@@ -1,0 +1,39 @@
+<h1><%= t('views.common.title_show', name: Report.model_name.human) %></h1>
+
+<p>
+  <strong><%= Report.human_attribute_name(:title) %>:</strong>
+  <%= @report.title %>
+</p>
+
+<p>
+  <strong><%= Report.human_attribute_name(:description) %>:</strong>
+  <%= @report.description %>
+</p>
+
+<p>
+  <strong><%= Report.human_attribute_name(:user) %>:</strong>
+  <%= @report.display_user_name %>
+</p>
+
+<p>
+  <strong><%= Report.human_attribute_name(:created_date) %>:</strong>
+  <%= l(@report.created_at.to_date) %>
+</p>
+
+<p>
+  <strong><%= Comment.model_name.human %>:</strong>
+</p>
+
+<p>
+  <%= render 'comments/index', comments: @report.comments %>
+</p>
+
+<p>
+  <%= render 'comments/new', commentable: @report %>
+</p>
+
+<% if @report.user == current_user %>
+  <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
+  <%= link_to t('views.common.destroy'), @report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %> |
+<% end %>
+<%= link_to t('views.common.back'), reports_path %>
